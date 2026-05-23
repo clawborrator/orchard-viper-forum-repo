@@ -501,7 +501,17 @@ push entirely. Empty commits add noise.
   owner asks "is 10W-30 still fine?" — the answer from the forum is
   generally "no, 0W-40 is better supported by data."
 - Street consensus: Mobil 1 0W-40 European Formula. Track: Mobil 1
-  15W-50. Diesel-oil camp: Shell Rotella T Synthetic 5W-40.
+  15W-50. Diesel-oil camp: Shell Rotella T6 5W-40 (synthetic).
+- **Engineering dissent on 0W-40 (Dick Winkles, 22+ yrs Chrysler/Viper
+  V10 engine development, 2024 post in thread/662560):** Chrysler testing
+  showed 0W-40 had increased wear on pistons, rings, bores, and bearings
+  vs. higher-viscosity blends. The Pennzoil switch was a purchasing
+  directive, not engineering. For street/garage-queen Vipers, Winkles
+  recommends **Mobil 1 High Mileage 10W-40** (higher detergent, seal
+  conditioners for cars that sit, less viscosity shear). For racing:
+  Mobil 1 15W-50 or Pennzoil 5W-60 race oil. Surface both views when
+  asked about street oil weight — community vs. engineer disagree.
+- Oil filter Gen 1–3: SRT #05037836**AB** (not the AA version).
 - **Hard start / long crank** — endemic Gen 1 issue; primary cause is
   the fuel pump check valve failing to hold line pressure after
   shutdown. The PCM's 1-second safety cutoff makes re-priming slow.
@@ -528,10 +538,9 @@ push entirely. Empty commits add noise.
 
 ### Failure modes encountered
 
-(none yet. Example format:
-- 2026-MM-DD: cookies expired during cycle, auth-check returned
-  logged_in=false. Operator refreshed and remounted; resumed
-  cleanly.
-- 2026-MM-DD: XenForo skin update broke `.contentRow-snippet`;
-  selector now lives at `.contentRow .excerpt`. Patched.)
+- 2026-05-23: Long-running threads (10+ years, 50+ posts) truncate at
+  --max-posts 20. Post anchor URLs (e.g. /post-3309466) do NOT paginate
+  to the target page — the tool always starts from post 1. Use
+  --max-posts 60 when a search snippet shows recent posts in an old
+  thread. Filter in-process with node if needed.
 
