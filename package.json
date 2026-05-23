@@ -1,0 +1,22 @@
+{
+  "name": "orchard-viper-forum-repo",
+  "version": "0.1.0",
+  "description": "Playbook + Playwright wrapper for the @MRIIOT/orchard-viper-forum specialist agent. Runs inside ladder99/clawborrator-worker-playwright; searches viperclub.org/vca/ on behalf of inbound dispatches and cites threads back to the asker.",
+  "private": true,
+  "scripts": {
+    "auth-check":   "node specialists/viperclub.js auth-check",
+    "search":       "node specialists/viperclub.js search",
+    "read-thread":  "node specialists/viperclub.js read-thread",
+    "recent":       "node specialists/viperclub.js recent"
+  },
+  "dependencies": {
+    "playwright":                          "1.49.0",
+    "playwright-extra":                    "^4.3.6",
+    "puppeteer-extra":                     "^3.3.6",
+    "puppeteer-extra-plugin-stealth":      "^2.11.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "_comment": "playwright is pre-installed globally inside the worker_v1-playwright image and NODE_PATH resolves require('playwright') to the global install. Declaring it locally is defense-in-depth so the repo is runnable for development outside the container without re-downloading Chromium (PLAYWRIGHT_BROWSERS_PATH points at /usr/local/share/playwright in the image)."
+}
