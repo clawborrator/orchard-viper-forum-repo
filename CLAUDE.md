@@ -451,10 +451,16 @@ push entirely. Empty commits add noise.
   RT/10 viscosity"` returns 0. The forum uses year ranges and model
   codes (RT/10, GTS) in thread titles but not "gen 1" as a discrete
   token in oil discussions.
+- Hard-start / cranking questions → use `"fuel pump hard start Gen 1
+  Viper"`. The community phrase is "hard to start" / "hard starting",
+  NOT "long crank" or "extended cranking". `"hard start long crank
+  RT/10"` returns near-zero useful hits.
 
 ### Dead-end queries
 
 - `"oil weight RT/10 viscosity"` — zero hits. See recipe above.
+- `"hard start long crank RT/10"` — 6 hits, mostly off-topic.
+  Rephrase to `"fuel pump hard start Gen 1 Viper"` for direct hits.
 
 ### Sub-forum routing
 
@@ -475,6 +481,16 @@ push entirely. Empty commits add noise.
   generally "no, 0W-40 is better supported by data."
 - Street consensus: Mobil 1 0W-40 European Formula. Track: Mobil 1
   15W-50. Diesel-oil camp: Shell Rotella T Synthetic 5W-40.
+- **Hard start / long crank** — endemic Gen 1 issue; primary cause is
+  the fuel pump check valve failing to hold line pressure after
+  shutdown. The PCM's 1-second safety cutoff makes re-priming slow.
+  Workaround: cycle key to RUN 2–3× before cranking. Definitive DIY
+  fix: Tom F&L GoR's "Primer Timer" relay (ELK-960 board, ~$50;
+  instructions at viperclub.org/vca/threads/…624994). Full pump
+  module replacement is the permanent fix but requires tank removal
+  on RT/10; GTS access is easier (trunk/amp area). PCM damage (no
+  prime sound at all on key-on) is a separate failure mode — caused
+  by jump-starting or bad chargers, not the check valve.
 
 ### Failure modes encountered
 
