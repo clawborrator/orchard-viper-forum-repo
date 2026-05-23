@@ -403,19 +403,29 @@ operator's explicit ask.
 
 PUSH
 After editing, commit and push back to the repo so the next
-container restart (and any other replicas) inherit the lesson:
+container restart (and any other replicas) inherit the lesson.
+ORDER MATTERS — commit FIRST, then rebase, then push. Rebasing
+before committing fails because git refuses to rebase a dirty
+working tree:
 
 ```
 cd /workspace/repo
 git add CLAUDE.md
-git pull --rebase origin main
 git commit -m "learned: <one-line summary of the lesson>"
+git pull --rebase origin main   # rebase YOUR new commit on top of remote
 git push origin main
 ```
 
-If the rebase fails, abort cleanly (`git rebase --abort`), re-read
-CLAUDE.md, and retry your edit on top of the new state. Don't
-force-push.
+If `git pull --rebase` reports a conflict (someone hand-edited
+the same section while you were working), abort cleanly
+(`git rebase --abort`), re-read the updated CLAUDE.md, and either
+retry your edit on top of the new state or skip the push for
+this turn. Never force-push.
+
+If `git push` is rejected as non-fast-forward (another commit
+landed between your rebase and your push), retry the
+`git pull --rebase` + `git push` pair once. If it still fails,
+skip and try again next turn.
 
 If you complete a search WITHOUT any new learning, skip the
 push entirely. Empty commits add noise.
