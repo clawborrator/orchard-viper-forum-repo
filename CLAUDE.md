@@ -474,6 +474,12 @@ push entirely. Empty commits add noise.
   viscosity threads live; forum-wide search finds them too but the
   sub-forum label helps confirm relevance when scanning results.
 
+### Search recipes that worked (continued)
+
+- Brake upgrade questions → `"brake caliper rotor upgrade Gen 1 Viper"`
+  returns 10 solid hits on first try. `"brake upgrade RT/10 GTS big
+  brake kit"` also works (7 hits, slightly less precise).
+
 ### Gen 1 community knowledge (RT/10 1992–1996, GTS 1996–2002)
 
 - Factory fill was Mobil 1 10W-30 through ~2004 across all Viper
@@ -496,6 +502,19 @@ push entirely. Empty commits add noise.
   on RT/10; GTS access is easier (trunk/amp area). PCM damage (no
   prime sound at all on key-on) is a separate failure mode — caused
   by jump-starting or bad chargers, not the check valve.
+- **Brake upgrades — spindle split is the key constraint:**
+  Gen 1 (1992–1996 RT/10, early 1996 GTS) has STEEL front spindles;
+  Gen 2 (1997–2002) has ALUMINUM spindles. Virtually all modern BBK
+  adapters target the aluminum spindle. As of 2025, "Dave's Big Brake
+  Kit" (DVS-002) and "Tom's 40mm rear calipers" are no longer sold;
+  IPSCO won't make a Gen 1 kit; StopTech/Wilwood have no confirmed
+  Gen 1 14" kit. Baer lists 4141009R/4142009R but fitment unconfirmed
+  for steel spindle. Gen 2 options: Roe Racing 14" lightweight 2-piece
+  fronts + Brembo/SRT-10 calipers is the documented community path.
+  CTSV/Camaro SS rear caliper adapters (TriniTT billet kit) work on
+  1996–2000 non-ABS rear only. 17" stock Gen 1 wheels barely clear
+  13" rear upgrade (~3mm spoke, 1-2mm barrel); 18"+ wheels strongly
+  recommended before any big brake install.
 
 ### Failure modes encountered
 
