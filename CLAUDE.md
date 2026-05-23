@@ -466,6 +466,13 @@ push entirely. Empty commits add noise.
   NOT "long crank" or "extended cranking". `"hard start long crank
   RT/10"` returns near-zero useful hits.
 
+- Cooling / radiator questions → `"radiator cooling upgrade Gen 2
+  Viper"` and `"Viper radiator replacement fan cooling temp"` both
+  return 10 solid hits. Dead-end phrasings: `"overheating cooling
+  system GTS RT10 1997 2002"` (0 hits) and `"coolant temp high Viper
+  GTS track heat soak"` (0 hits). The community doesn't use
+  "overheating" as a search term; use "radiator" and "fan" instead.
+
 ### Dead-end queries
 
 - `"oil weight RT/10 viscosity"` — zero hits. See recipe above.
@@ -476,6 +483,8 @@ push entirely. Empty commits add noise.
   inline check valve discussion exists only as a brief exchange inside
   Tom's Primer Timer thread (thread/591775); there is no standalone
   thread on this topic.
+- `"overheating cooling system GTS RT10 1997 2002"` — 0 hits.
+- `"coolant temp high Viper GTS track heat soak"` — 0 hits.
 
 ### Sub-forum routing
 
@@ -522,6 +531,23 @@ push entirely. Empty commits add noise.
   on RT/10; GTS access is easier (trunk/amp area). PCM damage (no
   prime sound at all on key-on) is a separate failure mode — caused
   by jump-starting or bad chargers, not the check valve.
+- **Cooling system — Gen 1/2 (RT/10 1992–1996, GTS/RT10 1996–2002):**
+  The #1 complaint is after-shutdown heat soak — factory fan stops at
+  key-off. Best-value fix: **Roe Racing Fan Control Kit** (temp-
+  adjustable after-run fan, ~30-min install, called "BEST ACCESSORY
+  PURCHASE FOR THE MONEY" in the forum's Golden Collection thread).
+  Premium track upgrade: **PWR radiator module for Gen 2 (1996–2002)**
+  with dual SPAL 12" brushless fans, ~$3k from pwrna.com. Mid-tier:
+  aftermarket aluminum radiator (documented track use: stayed under 190°F
+  at Waterford Hills). Hidden fascia overflow bottle hose often needs worm
+  clamps. Rad cap gasket hardening → air ingestion → hot-idle-only
+  symptom → replace cap (spring-center type) and burp. Gen II ACR:
+  Mopar 3-year coolant formula must change every 2 years regardless of
+  mileage. PCM advisory: thermostats below 190°F lock PCM adaptive
+  updating (per Viper Specialty/Dan). PCM reflash to lower fan
+  activation temps (stock: 207°F low / 216°F high) is a common track
+  prep step. Radiator hose collapse under load is a **Gen 3/4 issue
+  only** (not Gen 2); fix for that is a hose spring or silicone hoses.
 - **Brake upgrades — spindle split is the key constraint:**
   Gen 1 (1992–1996 RT/10, early 1996 GTS) has STEEL front spindles;
   Gen 2 (1997–2002) has ALUMINUM spindles. Virtually all modern BBK
