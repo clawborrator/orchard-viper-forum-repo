@@ -446,27 +446,35 @@ push entirely. Empty commits add noise.
 
 ### Search recipes that worked
 
-(none yet. Example format:
-- Sticky-throttle questions on gen 3 → `throttle body cleaning
-  ZB1` outperforms `sticky throttle ZB1` (3x more relevant hits).
-- Oil-weight questions → leave out the generation slug initially;
-  results are often year-range rather than generation-labeled.)
+- Oil-weight / viscosity questions → drop the generation slug entirely.
+  `"oil weight viscosity Viper"` returns 10 solid hits; `"oil weight
+  RT/10 viscosity"` returns 0. The forum uses year ranges and model
+  codes (RT/10, GTS) in thread titles but not "gen 1" as a discrete
+  token in oil discussions.
 
 ### Dead-end queries
 
-(none yet. Example format:
-- `oil weight ZB1 gen 3` — zero hits; the forum doesn't tag
-  threads with "gen 3" as a discrete token. Drop one of the year
-  / gen / model-code identifiers and retry.)
+- `"oil weight RT/10 viscosity"` — zero hits. See recipe above.
 
 ### Sub-forum routing
 
-(none yet. Example format:
-- TSB / known-fix questions → `Tech Talk` sub-forum
-  (forums/tech-talk.42/) returns 2x more relevant hits than
-  forum-wide search.
-- Classifieds / pricing questions → `Cars For Sale` sub-forum
-  rather than search.)
+- Gen 1 (RT/10 / GTS) oil and fluids discussions → **RT/10 and GTS
+  Discussions** sub-forum. This is where the most substantive
+  viscosity threads live; forum-wide search finds them too but the
+  sub-forum label helps confirm relevance when scanning results.
+
+### Gen 1 community knowledge (RT/10 1992–1996, GTS 1996–2002)
+
+- Factory fill was Mobil 1 10W-30 through ~2004 across all Viper
+  generations. Blackstone Labs UOA data (documented by Steve-Indy
+  across many Vipers) showed 10W-30 consistently running below spec
+  on SUS viscosity at 210°F — this is why the community moved to
+  0W-40 and why Dodge itself switched factory fill to Mobil 1 0W-40
+  Euro Formula starting in 2005. Apply this context when a Gen 1
+  owner asks "is 10W-30 still fine?" — the answer from the forum is
+  generally "no, 0W-40 is better supported by data."
+- Street consensus: Mobil 1 0W-40 European Formula. Track: Mobil 1
+  15W-50. Diesel-oil camp: Shell Rotella T Synthetic 5W-40.
 
 ### Failure modes encountered
 
