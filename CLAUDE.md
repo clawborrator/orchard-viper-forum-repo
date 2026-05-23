@@ -261,3 +261,112 @@ throttle on a gen-3 ZB1?" You:
    > either if you want the full discussion.
 
 That's the shape. Specific, sourced, useful.
+
+---
+
+## Self-improvement workflow (mandatory after every search)
+
+After every search you complete — whether it returned hits, hit
+no-results, or required retries — reflect briefly and update your
+own playbook. The static sections above are the stable contract;
+the "Learned" section below is your living scratchpad.
+
+REFLECT
+- Did the initial query phrasing hit on the first try? If you
+  retried, what alternate phrasing finally worked?
+- Did you discover any forum-specific vocabulary, slang, or
+  sub-forum knowledge that isn't already documented above?
+- Did any thread teach you a pattern (a model-year quirk, a
+  known-bad part number, a debate between two competing fixes)
+  that would help future answers?
+- Did anything fail in an instructive way (cookies-expired mid-
+  cycle, selector miss on a XenForo update, search timeout)?
+
+UPDATE
+Only add an entry if you learned something that would CHANGE a
+future search's approach. Successful first-try searches with the
+default vocabulary don't need entries unless they confirm
+something. Quality over volume — if the section is getting
+cluttered, consolidate or prune. Keep each entry short and
+concrete.
+
+Edit ONLY the "## Learned (auto-updated by the agent)" section
+below. Never touch the static playbook above without the
+operator's explicit ask.
+
+PUSH
+After editing, commit and push back to the repo so the next
+container restart (and any other replicas) inherit the lesson:
+
+```
+cd /workspace/repo
+git add CLAUDE.md
+git pull --rebase origin main
+git commit -m "learned: <one-line summary of the lesson>"
+git push origin main
+```
+
+If the rebase fails, abort cleanly (`git rebase --abort`), re-read
+CLAUDE.md, and retry your edit on top of the new state. Don't
+force-push.
+
+If you complete a search WITHOUT any new learning, skip the
+push entirely. Empty commits add noise.
+
+---
+
+## Learned (auto-updated by the agent)
+
+<!--
+  AGENT: this section is yours to maintain. Append entries under
+  the right sub-heading using the format shown in the placeholder.
+  Replace the "(none yet …)" placeholders the first time you have
+  a real entry. Keep entries short, dated when temporal, and
+  concrete.
+
+  OPERATOR: this section's git history is the audit trail of what
+  the agent has learned. Review periodically; if entries become
+  contradictory or stale, prune by hand in a regular commit
+  (separate from agent commits).
+-->
+
+### Vocabulary discoveries
+
+(none yet. Example format:
+- `snake` / `the snake` — owner's affectionate term for the car;
+  hits prefer `Viper` in canonical posts, but combining both
+  improves recall in classifieds and casual threads.)
+
+### Search recipes that worked
+
+(none yet. Example format:
+- Sticky-throttle questions on gen 3 → `throttle body cleaning
+  ZB1` outperforms `sticky throttle ZB1` (3x more relevant hits).
+- Oil-weight questions → leave out the generation slug initially;
+  results are often year-range rather than generation-labeled.)
+
+### Dead-end queries
+
+(none yet. Example format:
+- `oil weight ZB1 gen 3` — zero hits; the forum doesn't tag
+  threads with "gen 3" as a discrete token. Drop one of the year
+  / gen / model-code identifiers and retry.)
+
+### Sub-forum routing
+
+(none yet. Example format:
+- TSB / known-fix questions → `Tech Talk` sub-forum
+  (forums/tech-talk.42/) returns 2x more relevant hits than
+  forum-wide search.
+- Classifieds / pricing questions → `Cars For Sale` sub-forum
+  rather than search.)
+
+### Failure modes encountered
+
+(none yet. Example format:
+- 2026-MM-DD: cookies expired during cycle, auth-check returned
+  logged_in=false. Operator refreshed and remounted; resumed
+  cleanly.
+- 2026-MM-DD: XenForo skin update broke `.contentRow-snippet`;
+  selector now lives at `.contentRow .excerpt`. Patched.)
+
