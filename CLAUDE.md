@@ -472,6 +472,9 @@ push entirely. Empty commits add noise.
   system GTS RT10 1997 2002"` (0 hits) and `"coolant temp high Viper
   GTS track heat soak"` (0 hits). The community doesn't use
   "overheating" as a search term; use "radiator" and "fan" instead.
+- Spark plug questions → `"spark plug Viper Champion RC12LYC"` returns
+  10 solid hits. Dead-ends: `"spark plug GTS RT10 Gen 2 replacement"`
+  (0 hits); `"spark plug Viper NGK iridium platinum"` (1 hit).
 
 ### Dead-end queries
 
@@ -485,6 +488,8 @@ push entirely. Empty commits add noise.
   thread on this topic.
 - `"overheating cooling system GTS RT10 1997 2002"` — 0 hits.
 - `"coolant temp high Viper GTS track heat soak"` — 0 hits.
+- `"spark plug GTS RT10 Gen 2 replacement"` — 0 hits.
+- `"spark plug Viper NGK iridium platinum"` — 1 hit, mostly off-topic.
 
 ### Sub-forum routing
 
@@ -531,6 +536,19 @@ push entirely. Empty commits add noise.
   on RT/10; GTS access is easier (trunk/amp area). PCM damage (no
   prime sound at all on key-on) is a separate failure mode — caused
   by jump-starting or bad chargers, not the check valve.
+- **Spark plugs — Gen 1/2 (RT/10 1992–1996, GTS/RT10 1996–2002):**
+  Gen 2 OEM: Champion RC12LYC (Mopar #412), gap .038". Community
+  consensus prefers **Champion RC12ECC (Mopar #438)** — same heat
+  range/thread/reach, double-copper ground electrode; this is the Gen
+  3/SRT-10 OEM plug and is treated as a direct drop-in improvement.
+  Avoid platinum on all Vipers: retains heat → detonation risk; on
+  boosted cars electrodes can shed and destroy pistons. Bosch
+  Platinum+4 specifically called out as failure-prone. Iridium only
+  relevant for Striker-head TT builds (Denso ITV27); no advantage on
+  stock N/A Gen 2. Aftermarket wires: **AB's Quality Wires
+  (qualitywires.com)** is the most-recommended option across multiple
+  threads; install tip: replace one wire at a time, use anti-seize on
+  threads (skip first 2), dielectric grease in both ends of boots.
 - **Cooling system — Gen 1/2 (RT/10 1992–1996, GTS/RT10 1996–2002):**
   The #1 complaint is after-shutdown heat soak — factory fan stops at
   key-off. Best-value fix: **Roe Racing Fan Control Kit** (temp-
