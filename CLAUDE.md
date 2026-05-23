@@ -461,6 +461,11 @@ push entirely. Empty commits add noise.
 - `"oil weight RT/10 viscosity"` — zero hits. See recipe above.
 - `"hard start long crank RT/10"` — 6 hits, mostly off-topic.
   Rephrase to `"fuel pump hard start Gen 1 Viper"` for direct hits.
+- `"inline check valve fuel line hard start Viper"` / `"external check
+  valve fuel pressure retention Viper"` — 0 hits each. The community's
+  inline check valve discussion exists only as a brief exchange inside
+  Tom's Primer Timer thread (thread/591775); there is no standalone
+  thread on this topic.
 
 ### Sub-forum routing
 
