@@ -54,8 +54,14 @@ const SELECTORS = {
 
   // Search form on /vca/search/. The form POSTs to /vca/search/search
   // and XenForo redirects to /vca/search/<id>/?q=... with results.
-  searchKeywordInput: 'input[name="keywords"]',
-  searchSubmit:       'form button[type="submit"], form button.button--primary',
+  //
+  // IMPORTANT: scope to form.block (the visible main-content form).
+  // XenForo also renders a hidden nav-bar dropdown search at
+  // form.menu-content with the same input name="keywords" — without
+  // the form.block scope, Playwright strict mode fails with
+  // "selector resolved to 2 elements".
+  searchKeywordInput: 'form.block input[name="keywords"]',
+  searchSubmit:       'form.block button[type="submit"], form.block button.button--primary',
 
   // Search results: each result is a li.block-row containing a
   // .contentRow. Title is the first anchor inside .contentRow-main.
