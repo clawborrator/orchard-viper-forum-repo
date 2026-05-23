@@ -475,6 +475,10 @@ push entirely. Empty commits add noise.
 - Spark plug questions → `"spark plug Viper Champion RC12LYC"` returns
   10 solid hits. Dead-ends: `"spark plug GTS RT10 Gen 2 replacement"`
   (0 hits); `"spark plug Viper NGK iridium platinum"` (1 hit).
+- New-owner / first-purchase questions → `"what to do first Viper just
+  bought new owner"` returns 10 solid hits. Dead-ends: `"new owner
+  checklist Gen 1 Viper RT10 first purchase"` (0 hits); `"Viper first
+  owner maintenance inspection RT10 GTS"` (0 hits).
 
 ### Dead-end queries
 
@@ -536,6 +540,33 @@ push entirely. Empty commits add noise.
   on RT/10; GTS access is easier (trunk/amp area). PCM damage (no
   prime sound at all on key-on) is a separate failure mode — caused
   by jump-starting or bad chargers, not the check valve.
+- **Gen 1 RT/10 (1992–1996) first-owner critical items:**
+  - *Clutch orientation switch* — Gen 1-specific; eliminate/bypass it.
+    It randomly fails and prevents starting with no warning. Standard
+    first-owner fix; no safety downside to removing it.
+  - *Front fascia coolant reservoir body bolt* — A body bolt behind the
+    fascia bears on the lower coolant reservoir and eventually punctures
+    it. Pull the fascia and inspect; replace reservoir + cushion/reposition
+    bolt. Add worm clamps to hose between tanks while in there.
+  - *Power steering pulley* — Stock is plastic; WILL eventually shatter
+    with no warning. IPSCO billet aluminum pulley + bracket is the
+    documented fix (ipsco.org). Do not wait for failure.
+  - *Valve cover bolts back out* — Bolts commonly found loose, causing
+    oil leaks. Replace with cap-head allen bolts for easier future access.
+  - *Transmission fluid* — Gen 1 RT/10 uses **DEX III ATF**, NOT gear
+    oil (important for blocker rings). 96 GTS also ATF.
+  - *Timing cover gasket* — Has coolant passages; failure = coolant/oil
+    mix. Cometic gaskets (aluminum core) preferred over Mopar paper for
+    all front engine gaskets (water pump, timing cover, intake, oil
+    filter adapter, throttle body, IAC).
+  - *Battery* — Do NOT use Optima Redtop; kills in ~6 months. Standard
+    lead-acid or AGM. Use NOCO Genius float charger for storage.
+- **Parts sources (documented across multiple threads):**
+  - Jon B at Viper Parts Rack (viperpartsrack.com) — general parts
+  - IPSCO (ipsco.org) — PS pulley/bracket, short shifter
+  - AB's Quality Wires (qualitywires.com) — spark plug wires
+  - Havik — water pump rebuilds, OEM radiator recore
+  - Viperwizard / Kees — EU-based Viper parts source
 - **Spark plugs — Gen 1/2 (RT/10 1992–1996, GTS/RT10 1996–2002):**
   Gen 2 OEM: Champion RC12LYC (Mopar #412), gap .038". Community
   consensus prefers **Champion RC12ECC (Mopar #438)** — same heat
