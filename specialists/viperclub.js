@@ -55,18 +55,27 @@ const SELECTORS = {
   // Search form on /vca/search/. The form POSTs to /vca/search/search
   // and XenForo redirects to /vca/search/<id>/?q=... with results.
   //
-  // IMPORTANT: scope to form.block (the visible main-content form).
-  // XenForo also renders a hidden nav-bar dropdown search at
-  // form.menu-content with the same input name="keywords" — without
-  // the form.block scope, Playwright strict mode fails with
-  // "selector resolved to 2 elements".
-  searchKeywordInput: 'form.block input[name="keywords"]',
-  searchSubmit:       'form.block button[type="submit"], form.block button.button--primary',
+  // XenForo renders TWO forms with input[name="keywords"]:
+  //   - form.menu-content (hidden nav-bar dropdown)
+  //   - form.block (visible main-content form)
+  // The main form sometimes swallows programmatic submits via XenForo's
+  // JS overlay handlers; the menu form is a plain POST and reliably
+  // navigates. The search() function submits via page.evaluate against
+  // whichever exists (preferring the menu form) so we don't depend on
+  // a fragile Playwright click path.
 
-  // Search results: each result is a li.block-row containing a
-  // .contentRow. Title is the first anchor inside .contentRow-main.
-  // Author is exposed as a data attribute on the li for cleanliness.
-  searchResultRow:    'li.block-row',
+  // Empty-results indicator. When XenForo finds nothing, it lands on
+  // /vca/search/search (no <id> segment) and shows a .blockMessage
+  // reading "No results found." Other .blockMessage elements (banner
+  // ads, "become a supporting member") share the class, so match the
+  // text.
+  noResultsMessage:   '.blockMessage',
+
+  // Result rows on /vca/search/<id>/?q=… have data-author set to the
+  // thread starter's name. Sidebar widgets on the same page ("Latest
+  // posts", recent classifieds) ALSO render as li.block-row but
+  // without data-author. Scope on the attribute to filter cleanly.
+  searchResultRow:    'li.block-row[data-author]',
   searchResultTitle:  '.contentRow-main h3 a, .contentRow-main a',
   searchResultSnippet:'.contentRow-snippet',
   searchResultTime:   '.contentRow-minor time, time',
@@ -213,15 +222,38 @@ async function search(query, limit) {
   const { browser, ctx } = await browserContext();
   try {
     const page = await ctx.newPage();
-    // Visit the search index, fill the form, submit. XenForo will
-    // redirect us to /search/<id>/?q=... where the results render.
+    // Visit the search index, then submit via in-page JS so we don't
+    // depend on Playwright clicking a possibly-JS-intercepted button.
+    // Prefer the nav-bar (menu) form because it's a plain POST that
+    // reliably navigates; fall back to form.block if for some reason
+    // the menu form isn't on the page (skin variations).
     await page.goto(`${BASE}/search/`, { waitUntil: 'domcontentloaded' });
-    await page.fill(SELECTORS.searchKeywordInput, query);
     await Promise.all([
-      page.waitForLoadState('domcontentloaded'),
-      page.click(SELECTORS.searchSubmit),
+      page.waitForNavigation({ waitUntil: 'domcontentloaded' }).catch(() => {}),
+      page.evaluate((q) => {
+        const f = document.querySelector('form.menu-content')
+               || document.querySelector('form.block');
+        if (!f) throw new Error('search form not found (neither form.menu-content nor form.block)');
+        const inp = f.querySelector('input[name="keywords"]');
+        if (!inp) throw new Error('search keywords input not found');
+        inp.value = q;
+        f.requestSubmit ? f.requestSubmit() : f.submit();
+      }, query),
     ]);
     await sleep(DELAY_MS);
+
+    // No-results branch: XenForo redirects to /vca/search/search (no
+    // <id>) and renders a "No results found." .blockMessage. Avoid
+    // matching unrelated .blockMessage banners (e.g. "Become a
+    // Supporting Member") by text-checking.
+    const messages = await page.$$(SELECTORS.noResultsMessage);
+    for (const m of messages) {
+      const text = ((await m.textContent()) || '').toLowerCase();
+      if (text.includes('no results')) {
+        out({ query, count: 0, results: [] });
+        return;
+      }
+    }
 
     const rows = await page.$$(SELECTORS.searchResultRow);
     const results = [];
