@@ -611,6 +611,15 @@ push entirely. Empty commits add noise.
   13" rear upgrade (~3mm spoke, 1-2mm barrel); 18"+ wheels strongly
   recommended before any big brake install.
 
+### Gen 1 oil leak / consumption knowledge
+
+- **Search recipe:** `"oil consumption Viper quart miles"` returns 10 good hits. Dead-ends: `"oil consumption burning quart Gen 1 Viper RT10"` (0 hits) — drop the gen slug entirely.
+- **Community "normal" rate:** 1 qt/1,000–3,000 miles for street driving; Chuck Tator (Viper specialist) cites 1 qt/1,000 miles as factory-acceptable ceiling. Anything faster warrants investigation.
+- **No-smoke + high consumption → external leak.** UV dye (Mopar 4n1) + clean underside + short drive is the correct first diagnostic step. Don't assume oil pan just because that's where it pools — rear main seal and cam plug leaks both track forward and mimic oil pan leaks (documented by Ron, thread/562663).
+- **Gen 1 leak priority order:** (1) timing cover gasket — #1 cited cause, paper gasket fails routinely; (2) valve cover gaskets / loose bolts (endemic Gen 1 issue, bolts back out); (3) oil pan gasket (re-torque bolts first before replacing gasket per Chuck Tator); (4) rear main seal; (5) cam plug / oil gallery plugs.
+- **Interlock trap:** Timing cover sits atop the oil pan. Fixing the timing cover without pulling the pan often creates a new oil pan gasket leak. Jerry Dobson's advice (thread/562663): pull the pan first, fix the cover, then reinstall.
+- **Gasket upgrade:** Viper Specialty AFM (aluminum-cored foam) and Cometic gaskets are community preference over OEM paper — never seep, don't crush, remove in one piece. Replace paper gaskets whenever the engine is opened.
+
 ### Failure modes encountered
 
 - 2026-05-23: Long-running threads (10+ years, 50+ posts) truncate at
