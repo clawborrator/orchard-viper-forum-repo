@@ -620,6 +620,38 @@ push entirely. Empty commits add noise.
 - **Interlock trap:** Timing cover sits atop the oil pan. Fixing the timing cover without pulling the pan often creates a new oil pan gasket leak. Jerry Dobson's advice (thread/562663): pull the pan first, fix the cover, then reinstall.
 - **Gasket upgrade:** Viper Specialty AFM (aluminum-cored foam) and Cometic gaskets are community preference over OEM paper — never seep, don't crush, remove in one piece. Replace paper gaskets whenever the engine is opened.
 
+### Compression and leakdown knowledge (Gen 1/2 V10)
+
+- **Search recipes:** `"cylinder leakdown Viper"` → 10 hits; `"compression PSI Viper
+  cylinder pressure"` → 10 hits. Dead-end: `"compression test leakdown Gen 1 Viper
+  RT10"` → 0 hits — drop the gen slug entirely.
+- **Expected compression (warm engine):** 172–183 PSI across all 10 cylinders is
+  healthy for a hard-driven 48K-mile Gen 1 (viperrt96, thread/656592). Cold tests
+  run ~10–15% lower — 154–168 PSI on a cold 43K-mile Gen 2 was confirmed "fine" by
+  Old School (same thread). Always test warm for meaningful absolutes.
+- **The rule that matters:** all cylinders within **10% of each other**. Spread > 10%
+  warrants investigation regardless of the absolute value.
+- **Leakdown thresholds:** < 5% = excellent (Walter Clark, 94 RT/10, < 40K miles,
+  thread/678317); < 10% warm = healthy (Dan Cragin's benchmark); 27% on worst
+  cylinder = rebuild territory (treesnake's botched ring build, thread/631302).
+- **V10-specific leakdown quirk:** The V10 firing order alternates by **54° and 90°
+  crank degrees** over a 720° cycle — not evenly spaced like a V8. You cannot rotate
+  the crank by a fixed increment between cylinders. Makes TDC-finding a two-person
+  job or requires a dedicated setup (stamped damper markings + ARP crank bolt for
+  solo; Eastwood TDC spring tool + bump switch from alternator is ViperTony's
+  method). Source: GTS Dean and ViperTony, thread/678694.
+- **BDC shortcut:** For diagnosing head gaskets or cracked cylinders only, leakdown
+  at BDC (bottom dead center) works — just let air push the piston down. TDC is
+  required only when measuring ring seal specifically. (Old School, thread/678694.)
+- **Reading leakdown air escape:** oil filler = rings; intake/throttle body = intake
+  valve; exhaust pipe = exhaust valve; coolant overflow bubbles = head gasket.
+- **Head gaskets (Gen 1/2):** MLS gaskets on Gen 1/2 engines rarely blow (Dan Cragin:
+  "These Gen 2 engines don't blow head gaskets. The gaskets are multilayer steel and
+  very strong."). Run a hydrocarbon block-check strip in the coolant overflow before
+  assuming a head gasket. Valve stem seals hardening with age are far more common on
+  30-year-old Gen 1 cars — even at low mileage (Walter Clark's 94, < 40K miles, had
+  29-year-old rubber that was visibly hard and loose on the stem).
+
 ### Failure modes encountered
 
 - 2026-05-23: Long-running threads (10+ years, 50+ posts) truncate at
