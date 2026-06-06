@@ -652,6 +652,45 @@ push entirely. Empty commits add noise.
   30-year-old Gen 1 cars — even at low mileage (Walter Clark's 94, < 40K miles, had
   29-year-old rubber that was visibly hard and loose on the stem).
 
+### Fuel injector knowledge (Gen 1/2 V10)
+
+- **Search recipes:** `"injector service Viper flow bench"` → 7 hits; `"injector cleaning
+  Viper ultrasonic"` → 2 hits. Dead-ends: `"fuel injector cleaning remove Gen 1
+  Viper"` (6 hits, mostly off-topic); `"fuel injector remove intake Viper RT10"` (1
+  hit, wrong topic) — drop the gen slug and use "flow bench" or "ultrasonic".
+- **Injector design:** Gen 1/2 use **side-feed injectors** (rare). Fuel rails are
+  internal to the intake manifold (−8 AN passages cast in). No external rail to
+  remove. Gen 1 = 25 lb/hr black tops; Gen 2 = 29 lb/hr red tops. Regulated in-tank
+  at 55 psi; single feed line.
+- **Removal:** injectors pull straight up out of manifold bores. ~15 min for all 10.
+  Gen 1-specific: remove + scribe position of driver's-side throttle bracket bolts
+  first (affects cable geometry; must return to exact position). Use shop towel over
+  injector body when gripping with pliers; towel between screwdriver and manifold
+  when prying.
+- **O-ring gotcha:** lower o-rings frequently tear on removal, especially on
+  long-installed injectors. Have replacements before starting. Chrysler
+  #05015972AA (updated Chrysler 3.5L o-rings) is the documented cross-reference —
+  two packages covers all 10 for ~$25–30. Mopar brown o-rings preferred over black
+  GM/universal (too stiff, hard to seat). O-ring lube: **Vaseline only** — dissolves
+  in gasoline. NEVER WD-40 or penetrating oil — swells rubber. Upper o-rings usually
+  survive removal; stock from Chuck Tator / Viper Wizard. Fresh o-rings can also fix
+  idle-hang at operating temp (grcforce327, thread/594401).
+- **Cleaning — community-preferred method:** off-car ultrasonic + flow bench. 1TONY1
+  (Armour Racing) charges $120 for a full Gen 1/2 set of 10 — flow/clean/flow,
+  numbered results sheet, spray pattern, leak test. RC Engineering (Torrance CA)
+  ~$270 + shipping, also replaces o-rings. Stock injectors are "usually in pretty
+  good shape" (Bob D); Roe SC cars foul faster due to manifold placement.
+- **Quick first step:** Tom F&L GoR (forum chemist) recommends a $10 bottle of
+  Techron for mild stumble/hesitation before pulling injectors. If unresolved after
+  one tank, pull and send out.
+- **Do NOT:** use pressurized on-car induction service (Schrader flush kits, dealer
+  "fuel service") — 1TONY1 calls it "running the junk through it on the car." No
+  spray-pattern or leak verification possible.
+- **When to clean:** winter-storage cars especially benefit (varnish from sitting);
+  also pre-forced-induction builds (flow-test even new injectors as cheap insurance).
+- **Side-feed injector filters** cannot be acquired at the dealership — only through
+  specialists like 1TONY1.
+
 ### Failure modes encountered
 
 - 2026-05-23: Long-running threads (10+ years, 50+ posts) truncate at
