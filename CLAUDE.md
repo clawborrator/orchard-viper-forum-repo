@@ -494,6 +494,15 @@ push entirely. Empty commits add noise.
 - `"coolant temp high Viper GTS track heat soak"` — 0 hits.
 - `"spark plug GTS RT10 Gen 2 replacement"` — 0 hits.
 - `"spark plug Viper NGK iridium platinum"` — 1 hit, mostly off-topic.
+- `"oil consumption track hard driving Viper"` — 2 hits, off-topic.
+  Use `"oil consumption Viper quart miles"` for consumption rate data
+  and `"oil level drops track day Viper"` for oil starvation / track
+  prep threads instead.
+- `"oil burning RPM valve stem seals Viper"` — 0 hits.
+- `"oil pressure drop sweeping turns Viper track"` — 0 hits.
+- `"oil burning blue smoke Viper high RPM"` — 0 hits.
+- `"oil consumption rings blow-by Gen 1 Viper"` — 0 hits.
+- `"Viper oil pan sump modification track cornering"` — 2 hits, tangential.
 
 ### Sub-forum routing
 
@@ -507,6 +516,12 @@ push entirely. Empty commits add noise.
 - Brake upgrade questions → `"brake caliper rotor upgrade Gen 1 Viper"`
   returns 10 solid hits on first try. `"brake upgrade RT/10 GTS big
   brake kit"` also works (7 hits, slightly less precise).
+- Track/hard-use oil consumption and starvation → `"oil level drops
+  track day Viper"` returns 10 hits including the key road-racing prep
+  thread and the Accusump failure/oil starvation threads. Pair with
+  `"oil consumption Viper quart miles"` for consumption-rate data and
+  `"valve stem seals oil consumption Viper"` for the plug-diagnosis
+  thread (thread/525941, Tom Sessions).
 
 ### Gen 1 community knowledge (RT/10 1992–1996, GTS 1996–2002)
 
@@ -619,6 +634,10 @@ push entirely. Empty commits add noise.
 - **Gen 1 leak priority order:** (1) timing cover gasket — #1 cited cause, paper gasket fails routinely; (2) valve cover gaskets / loose bolts (endemic Gen 1 issue, bolts back out); (3) oil pan gasket (re-torque bolts first before replacing gasket per Chuck Tator); (4) rear main seal; (5) cam plug / oil gallery plugs.
 - **Interlock trap:** Timing cover sits atop the oil pan. Fixing the timing cover without pulling the pan often creates a new oil pan gasket leak. Jerry Dobson's advice (thread/562663): pull the pan first, fix the cover, then reinstall.
 - **Gasket upgrade:** Viper Specialty AFM (aluminum-cored foam) and Cometic gaskets are community preference over OEM paper — never seep, don't crush, remove in one piece. Replace paper gaskets whenever the engine is opened.
+- **Track-specific consumption (zero street use, elevated hard use):** Normal and expected. Three channels: (1) ring blow-by increases at high RPM/load; (2) valve stem/guide consumption spikes under the high-vacuum decel phases at every corner entry; (3) PCV system pushes more oil mist into the crossram intake at high RPM. GR8_ASP (thread/623553): "Track use increases consumption from by the rings and valve guides and through the PCV system as you should expect." SCLSSRT10 (same thread) considers 1 qt per race weekend entirely normal. Standard track prep: check oil before every session; fill to ½ qt above the full mark (EXHLR8N, thread/646027).
+- **Oil starvation under cornering — distinct from consumption, catastrophic risk:** Stock Gen 1/2 oil pan is unbaffled; pickup uncovers under sustained hard right turns. KaiPL (thread/600975) destroyed his engine at a track day this way: "oil starvation, spun the rod bearing, blew rods and pistons." The warning light triggers at 15 psi for 5 seconds — useless at 4,000+ RPM where the engine needs ~40 psi (rule of thumb: 10 psi per 1,000 RPM). Fix: **baffled Comp coupe oil pan** or Gen IV pan swap (EXHLR8N); or **Accusump** (Viper Specialty / Daniel Lesser kit, 3-qt recommended). CarDude (thread/602501) observed pressure drop even during spirited street cornering when oil was slightly low — don't track below full mark.
+- **Valve stem seal diagnosis:** Right-bank plugs more fouled than left = valve stem seals and/or PCV-to-intake oiling (crossram routes oil-rich air disproportionately to right bank per Tom Welch, thread/525941). Tom Sessions (same thread): "I had a 00 RT in the shop with high oil consumption and found no stem seals on the right head. Car runs fine, just using oil." Fix is in-house stem seal replacement — described as "not a major illness, just a small cold, easily fixed." Proactive replacement warranted on any 30-year-old Gen 1 during head or timing cover work.
+- **Year-2000 block ID for ring-seating issue:** Early 2000 MY GTS blocks (built before Oct 25, 1999) used powdered-metal cylinder liners (038AA stamped on lower front A/C compressor mount) that often failed to seat rings → 1 qt/300–500 miles consumption. Later cast iron liner blocks stamped 038AB are fine. If you see 038AA, expect a rebuild history or chronic consumption (VPA, thread/644736).
 
 ### Compression and leakdown knowledge (Gen 1/2 V10)
 
