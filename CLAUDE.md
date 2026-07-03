@@ -482,6 +482,14 @@ push entirely. Empty commits add noise.
 
 ### Dead-end queries
 
+- `"oil cooler replacement RT/10 Gen 1"` — 5 hits, only 1 relevant (McViper thread).
+  Use `"oil cooler Viper lines fittings block"` for lines/procedure threads and
+  `"ACR oil filter adapter shuttle valve upgrade"` for the adapter upgrade angle.
+- `"oil cooler Viper remove replace fascia core"` / `"Gen 1 Viper oil cooler 1992
+  1993 1994 1995"` — 0 hits each. Gen 1 cooler info lives inside McViper thread
+  (thread/603896), the WARNING thread (thread/672188), and the ACR adapter threads.
+- `"ACR oil filter adapter non-ACR shuttle valve bypass upgrade Gen 1"` — 0 hits.
+  Use `"ACR oil filter adapter shuttle valve upgrade"` (3 hits, includes JonB thread).
 - `"oil weight RT/10 viscosity"` — zero hits. See recipe above.
 - `"hard start long crank RT/10"` — 6 hits, mostly off-topic.
   Rephrase to `"fuel pump hard start Gen 1 Viper"` for direct hits.
@@ -513,6 +521,10 @@ push entirely. Empty commits add noise.
 
 ### Search recipes that worked (continued)
 
+- Oil cooler lines/procedure → `"oil cooler Viper lines fittings block"` → 10 hits
+  including WARNING thread (thread/672188) and oil-and-cooler-line-change thread
+  (thread/659250). For the ACR adapter upgrade angle: `"ACR oil filter adapter shuttle
+  valve upgrade"` → 3 hits including JonB's thread (thread/528813).
 - Brake upgrade questions → `"brake caliper rotor upgrade Gen 1 Viper"`
   returns 10 solid hits on first try. `"brake upgrade RT/10 GTS big
   brake kit"` also works (7 hits, slightly less precise).
@@ -625,6 +637,51 @@ push entirely. Empty commits add noise.
   1996–2000 non-ABS rear only. 17" stock Gen 1 wheels barely clear
   13" rear upgrade (~3mm spoke, 1-2mm barrel); 18"+ wheels strongly
   recommended before any big brake install.
+
+### Oil cooler / oil filter adapter knowledge (Gen 1/2 V10)
+
+- **System layout:** Oil cooler is a small CAB/oven-brazed aluminum heat exchanger
+  mounted in the front-end stack (in front of A/C condenser, behind fascia — same
+  collision zone as radiator). Two braided lines run rearward to the **oil filter
+  adapter** bolted to the passenger side of the block (4× T30 Torx, 8 ft-lb). All
+  cooling, filtering, and pressure-sensing routes through this single adapter.
+- **Non-ACR shuttle valve gotcha:** Stock (non-ACR) oil filter adapter has a shuttle
+  valve that CLOSES below 30 psi, bypassing the cooler at idle. Traps ~0.5–0.7 qt of
+  oil in the cooler/lines at shutdown — account for this when measuring oil in/out.
+  For any car that sees track use, the stock adapter is the wrong part.
+- **ACR oil filter adapter upgrade (P/N 04886503AC, gasket 05245086AC):** Eliminates
+  the shuttle valve; oil flows through cooler at all times. +10–12 psi at 5,200 RPM,
+  +5–7 psi at idle. Recommended by Team Viper Engine Manager Charlie Brown (JonB,
+  thread/528813). Non-ACR also fully drains at shutdown (no trapped oil). ~$239 from
+  Jon B/PartsRack; ~2–3 hr install. Do this any time the cooler or lines are out.
+  Trade-off: cooler oil heats condenser air slightly at idle — minor A/C impact.
+- **Gen 1 / Gen 2 cooler interchangeability:** All Gen 1 (1992–1995) and Gen 2
+  (1996–2002) cooler units are the same part. Used Gen 2 cooler from Jon B (~$100)
+  fits a '95 RT/10 directly. OEM list ~$500 (V10SpeedLuvr, thread/603896).
+- **1996 RT/10 line part numbers differ** from every other year (Chuck Tator —
+  "Gen 1.5" car). The 1992–1995 RT/10 share the same line numbers. Don't use 1996
+  line part numbers on a '95. Gen 2 lines fit the Gen 1 cooler unit as a documented
+  workaround when OEM Gen 1 lines are backordered.
+- **Fitting-at-cooler: the most dangerous step.** Seized fittings can snap the
+  brazed lug off the aluminum cooler body with surprisingly little torque (Bristolrover,
+  thread/672188). **Always apply propane heat to fittings at the cooler before
+  attempting to break them loose.** Use heat on the new cooler too when installing.
+- **Block-side fitting access:** Upper line fitting at the oil filter adapter is very
+  awkward. Best approach (Bristolrover): drill small hole in the old line to drain oil,
+  cut through the aluminum line sleeve near the fitting with a hacksaw blade (aluminum
+  cuts easily), then go in from the side with a socket + 6" extension.
+- **O-ring replacement:** "A royal pain" — use a pick to extract old ones; new ones
+  are very hard to seat, especially the two at the block end (Chemeng, thread/659250).
+  VSP or JTS lines with pre-fitted ORB swivel ends substantially reduce this misery.
+- **Aftermarket line preference:** (1) **Viper Specialty Performance** (~$295): ORB
+  swivel-end fittings, screw directly into block/cooler, no adapter. Forum top pick.
+  (2) **JTS Venom Performance**: crimped construction, lifetime warranty, 2,000–3,000
+  sets sold. (3) **DIY AN/JIC flare fittings: NOT recommended** — gall internally and
+  back off from engine vibration (Viper Specialty warning, thread/659250).
+- **Line chafing:** After install, split a piece of coolant hose and tie it over
+  braided lines anywhere they contact the frame. Also eliminates grounding issues.
+- **Access path:** Right front wheel off + air box removed → oil filter adapter.
+  Front fascia must come off (or be pulled back) to access the cooler unit ports.
 
 ### Gen 1 oil leak / consumption knowledge
 
